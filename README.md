@@ -12,7 +12,7 @@
 
 
 ## 🅿️ 프로젝트 설명 
-가치제안 들어갈 곳 </br>
+**'도를 깎자'는 빠르게 흘러가는 일상을 살아가는 사람들에게 자신을 돌아볼 시간이 충분하지 않다는 문제에서 시작하여, 자신의 마음을 돌아볼 수 있는 질문에 답변하고 돌을 깎음으로써, 사용자가 마음의 평온에 닿을 수 있도록 한다.** </br>
 
 ## 📍 주요 기능 
 주요 기능 머시기 </br>
@@ -34,4 +34,5 @@
 
 ## 📷 안주들 사진 (before)
 ![KakaoTalk_20240518_220223330_03](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/cf9b91c5-8794-49ca-9355-72b60e95203d) </br>
-![KakaoTalk_20240518_220223330_01](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/39af2da2-3335-4908-bb58-b54c149daf09)
+![KakaoTalk_20240518_224325262](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/a4879465-c711-40c6-be0b-2d7797569807)
+
