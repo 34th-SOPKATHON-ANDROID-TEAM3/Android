@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sopkathon Android3</string>
+    <string name="app_name">돌을깎자</string>
     <string name="healing_filp"><u>터치하여 뒤집기</u></string>
     <string name="main_check_healing"><u>힐링카드 확인하기</u></string>
     <string name="tv_calendar_year">2023</string>
