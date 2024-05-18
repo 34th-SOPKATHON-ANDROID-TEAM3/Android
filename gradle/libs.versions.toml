@@ -79,7 +79,9 @@ okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref 
 okhttp-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-gif = { group = "io.coil-kt", name = "coil-gif", version.ref = "coil" }
 
+flip-view = { group = "com.wajahatkarim", name = "EasyFlipView", version.ref = "filpview" }
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
