@@ -24,16 +24,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_main_calendar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_calendar"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
@@ -120,7 +110,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="앞면"
+            android:text="@string/fl_front_layer"
             android:background="@drawable/shape_white_fill_neutral_line_10_rect"
             android:layout_marginHorizontal="20dp"
             android:layout_gravity="center"
@@ -132,7 +122,7 @@
                     android:id="@+id/tv_healing_card_back_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="오늘의 힐링 카드"
+                    android:text="@string/tv_healing_card_back_title"
                     android:layout_marginTop="28dp"
                     android:layout_marginBottom="28dp"
                     app:layout_constraintTop_toTopOf="parent"
