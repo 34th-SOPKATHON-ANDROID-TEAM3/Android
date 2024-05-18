@@ -17,39 +17,45 @@
         android:theme="@style/Theme.SopkathonAndroid3"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity android:name=".SplashActivity"
-            android:exported="true">
-        </activity>
-        <activity android:name=".presentation.detail.DetailActivity"
-            android:exported="false" />
-        <activity android:name=".presentation.question.QuestionActivity"
-            android:exported="false" />
         <activity
-            android:name=".presentation.calendar.CalendarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.main.MainActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".presentation.dummy.DummyActivity"
-            android:exported="true" />
-
-        <activity android:name=".presentation.shake.ShakeActivity"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.detail.DetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presentation.question.QuestionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presentation.calendar.CalendarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presentation.main.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presentation.dummy.DummyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presentation.shake.ShakeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
 
-        <activity android:name=".presentation.healing.HealingActivity"
-            android:exported="true">
-
-
-        </activity>
+        <activity
+            android:name=".presentation.healing.HealingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
