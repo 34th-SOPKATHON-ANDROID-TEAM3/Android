@@ -1,40 +1,48 @@
 package org.sopt.sopkathon.android3.presentation.calendar
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import org.sopt.sopkathon.android3.R
 import org.sopt.sopkathon.android3.databinding.ActivityCalendarBinding
 import org.sopt.sopkathon.android3.presentation.calendar.adapter.CalendarAdapter
-import org.sopt.sopkathon.android3.presentation.dummy.DummyState
-import org.sopt.sopkathon.android3.presentation.dummy.DummyViewModel
 import org.sopt.sopkathon.android3.util.base.BindingActivity
 import java.util.Calendar
 
-class CalendarActivity : BindingActivity<ActivityCalendarBinding>({ActivityCalendarBinding.inflate(it)}) {
+class CalendarActivity :
+    BindingActivity<ActivityCalendarBinding>({ ActivityCalendarBinding.inflate(it) }) {
     private lateinit var calendarAdapter: CalendarAdapter
     private val viewModel by viewModels<CalendarViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        clickCloseBtn()
         initView()
+        calendarAdapter = CalendarAdapter {
+            if (!it.isPretty) {
+                val calendarWarningDialog = CalendarWarningDialogFragment()
+                calendarWarningDialog.show(supportFragmentManager, calendarWarningDialog.tag)
+            } else {
+                // val intent = Intent(this, DetailActivity::class.java)
+                intent.putExtra(ROCK_ID, it.id)
+                startActivity(intent)
+            }
+        }
         binding.rvCalendar.run {
             adapter = calendarAdapter
-            layoutManager = GridLayoutManager(this@CalendarActivity, 4)
+            layoutManager = GridLayoutManager(this@CalendarActivity, 5)
+        }
+
+        viewModel.fetchRockInfo()
+        viewModel.rockList.observe(this) {
+            calendarAdapter.submitList(it)
         }
     }
 
     private fun initView() {
+        binding.tvCalendarYear.text = Calendar.getInstance().get(Calendar.YEAR).toString()
         binding.tvCalendarMonthNumber.text = Calendar.getInstance().get(Calendar.MONTH).toString()
     }
-    private fun clickCloseBtn() {
-        binding.ivCalendarClose.setOnClickListener {
-            finish()
-        }
+
+    companion object {
+        private const val ROCK_ID = "rockId"
     }
 }
