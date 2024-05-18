@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_question_top_bar"
         android:layout_width="match_parent"
         android:layout_height="87dp"
         android:background="@color/green45"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_stone"
-            android:layout_marginTop="43dp"
             android:layout_marginStart="36dp"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/ic_stone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,43 +29,43 @@
         android:id="@+id/tv_question_number_unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tv_question_number_unit"
-        android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
+        android:text="@string/tv_question_number_unit"
+        android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cl_question_top_bar"/>
+        app:layout_constraintTop_toBottomOf="@id/cl_question_top_bar" />
 
     <TextView
         android:id="@+id/tv_question_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="@string/tv_question_number"
         android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
-        android:layout_marginTop="60dp"
         app:layout_constraintStart_toEndOf="@id/tv_question_number_unit"
-        app:layout_constraintTop_toBottomOf="@id/cl_question_top_bar"/>
-    
+        app:layout_constraintTop_toBottomOf="@id/cl_question_top_bar" />
+
     <ImageView
         android:id="@+id/iv_dot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/shape_gray_fill_circle"
         android:layout_marginStart="4dp"
         android:layout_marginTop="9dp"
+        android:src="@drawable/shape_gray_fill_circle"
         app:layout_constraintStart_toEndOf="@id/tv_question_number"
-        app:layout_constraintTop_toTopOf="@id/tv_question_number"/>
+        app:layout_constraintTop_toTopOf="@id/tv_question_number" />
 
     <TextView
         android:id="@+id/tv_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:text="@string/tv_month"
         android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
         android:textColor="@color/neutral30"
-        android:layout_marginStart="4dp"
         app:layout_constraintStart_toEndOf="@id/iv_dot"
-        app:layout_constraintTop_toTopOf="@id/tv_question_number"/>
+        app:layout_constraintTop_toTopOf="@id/tv_question_number" />
 
     <TextView
         android:id="@+id/tv_month_unit"
@@ -75,7 +75,7 @@
         android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
         android:textColor="@color/neutral30"
         app:layout_constraintStart_toEndOf="@id/tv_month"
-        app:layout_constraintTop_toTopOf="@id/tv_month"/>
+        app:layout_constraintTop_toTopOf="@id/tv_month" />
 
     <TextView
         android:id="@+id/tv_day"
@@ -85,7 +85,7 @@
         android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
         android:textColor="@color/neutral30"
         app:layout_constraintStart_toEndOf="@id/tv_month_unit"
-        app:layout_constraintTop_toTopOf="@id/tv_month_unit"/>
+        app:layout_constraintTop_toTopOf="@id/tv_month_unit" />
 
     <TextView
         android:id="@+id/tv_day_unit"
@@ -95,67 +95,59 @@
         android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
         android:textColor="@color/neutral30"
         app:layout_constraintStart_toEndOf="@id/tv_day"
-        app:layout_constraintTop_toTopOf="@id/tv_day"/>
+        app:layout_constraintTop_toTopOf="@id/tv_day" />
 
     <TextView
         android:id="@+id/tv_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/tv_question"
         android:textAppearance="@style/Typography.Sopkathon.Android3.Headline2"
-        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@id/tv_question_number_unit"
-        app:layout_constraintTop_toBottomOf="@id/tv_question_number_unit"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_question_number_unit" />
 
     <ImageView
         android:id="@+id/iv_answer_box"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:src="@drawable/ic_answer_box"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_answer_box"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_question"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_question" />
 
     <EditText
         android:id="@+id/et_answer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:hint="@string/et_answer"
-        android:textAppearance="@style/Typography.Sopkathon.Android3.Body2"
-        android:inputType="text"
-        android:background="@null"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="20dp"
+        android:background="@null"
         android:gravity="start"
-        app:layout_constraintStart_toStartOf="@id/iv_answer_box"
+        android:hint="@string/et_answer"
+        android:inputType="text"
+        android:textAppearance="@style/Typography.Sopkathon.Android3.Body2"
+        app:layout_constraintBottom_toBottomOf="@id/iv_answer_box"
         app:layout_constraintEnd_toEndOf="@id/iv_answer_box"
-        app:layout_constraintTop_toTopOf="@id/iv_answer_box"
-        app:layout_constraintBottom_toBottomOf="@id/iv_answer_box"/>
-
-    <ImageView
-        android:id="@+id/iv_btn_save"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_btn_save"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="@id/iv_answer_box"
+        app:layout_constraintTop_toTopOf="@id/iv_answer_box" />
 
     <TextView
         android:id="@+id/tv_save"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/shape_gray_fill_10_rect"
+        android:gravity="center"
+        android:paddingVertical="16dp"
         android:text="@string/tv_save"
         android:textAppearance="@style/Typography.Sopkathon.Android3.Button"
         android:textColor="@color/neutral60"
-        android:layout_marginVertical="16dp"
-        app:layout_constraintStart_toStartOf="@id/iv_btn_save"
-        app:layout_constraintEnd_toEndOf="@id/iv_btn_save"
-        app:layout_constraintTop_toTopOf="@id/iv_btn_save"
-        app:layout_constraintBottom_toBottomOf="@id/iv_btn_save"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

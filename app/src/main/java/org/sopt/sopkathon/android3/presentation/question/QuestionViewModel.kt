@@ -13,6 +13,8 @@ class QuestionViewModel : ViewModel() {
     private val answerService by lazy { ServicePool.stoneApi }
     private val _questionState = MutableLiveData<QuestionState<Unit>>()
     val questionState: LiveData<QuestionState<Unit>> get() = _questionState
+    val _isClickable = MutableLiveData(false)
+    val isClickable: LiveData<Boolean> get() = _isClickable
 
     fun patchAnswer(answerText: String) = viewModelScope.launch {
         val requestDto = RequestPatchAnswerDto(answer = answerText)
@@ -27,5 +29,13 @@ class QuestionViewModel : ViewModel() {
                     _questionState.value = QuestionState.Failure(it.message.toString())
                 }
             }
+    }
+
+    fun updateClickable(text: String) {
+        if (text.isNotEmpty()) {
+            _isClickable.value = true
+        } else {
+            _isClickable.value = false
+        }
     }
 }

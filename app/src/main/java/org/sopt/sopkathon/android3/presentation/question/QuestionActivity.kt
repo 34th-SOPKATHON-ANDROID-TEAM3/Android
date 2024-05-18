@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.widget.doAfterTextChanged
+import org.sopt.sopkathon.android3.R
 import org.sopt.sopkathon.android3.databinding.ActivityQuestionBinding
 import org.sopt.sopkathon.android3.presentation.shake.ShakeActivity
 import org.sopt.sopkathon.android3.util.base.BindingActivity
@@ -11,23 +13,42 @@ import org.sopt.sopkathon.android3.util.context.toast
 
 class QuestionActivity :
     BindingActivity<ActivityQuestionBinding>({ ActivityQuestionBinding.inflate(it) }) {
-
     private val viewModel by viewModels<QuestionViewModel>()
+    private var clickable = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.tvQuestion.text = intent.getStringExtra("question")
         initSaveButton()
         observeQuestionState()
+        binding.etAnswer.doAfterTextChanged {
+            viewModel.updateClickable(it.toString())
+        }
+        viewModel.isClickable.observe(this){
+            when(it){
+                true -> {
+                    clickable = true
+                    binding.tvSave.setTextColor(getColor(R.color.neutral100))
+                    binding.tvSave.setBackgroundResource(R.drawable.shape_green_fill_10_rect)
+                }
+                false -> {
+                    clickable = false
+                    binding.tvSave.setTextColor(getColor(R.color.neutral60))
+                    binding.tvSave.setBackgroundResource(R.drawable.shape_gray_fill_10_rect)
+                }
+            }
+        }
     }
 
     private fun initSaveButton() {
-        binding.ivBtnSave.setOnClickListener {
-            val answerText = binding.etAnswer.text.toString()
-            if (answerText.isNotEmpty()) {
-                viewModel.patchAnswer(answerText)
-            } else {
-                Toast.makeText(this, "답변을 입력해주세요.", Toast.LENGTH_SHORT).show()
+        binding.tvSave.setOnClickListener {
+            if(clickable){
+                val answerText = binding.etAnswer.text.toString()
+                if (answerText.isNotEmpty()) {
+                    viewModel.patchAnswer(answerText)
+                } else {
+                    Toast.makeText(this, "답변을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

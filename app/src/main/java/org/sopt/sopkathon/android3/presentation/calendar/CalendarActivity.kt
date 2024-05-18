@@ -16,6 +16,18 @@ class CalendarActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initView()
+        initCalendarAdapter()
+        observeRockList()
+        viewModel.fetchRockInfo()
+    }
+
+    private fun observeRockList() {
+        viewModel.rockList.observe(this) {
+            calendarAdapter.submitList(it)
+        }
+    }
+
+    private fun initCalendarAdapter() {
         calendarAdapter = CalendarAdapter {
             if (!it.isPretty) {
                 val calendarWarningDialog = CalendarWarningDialogFragment()
@@ -29,10 +41,6 @@ class CalendarActivity :
         binding.rvCalendar.run {
             adapter = calendarAdapter
         }
-        viewModel.rockList.observe(this) {
-            calendarAdapter.submitList(it)
-        }
-        viewModel.fetchRockInfo()
     }
 
     private fun initView() {

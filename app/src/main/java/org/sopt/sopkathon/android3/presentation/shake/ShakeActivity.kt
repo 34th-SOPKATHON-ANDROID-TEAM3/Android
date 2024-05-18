@@ -1,6 +1,5 @@
 package org.sopt.sopkathon.android3.presentation.shake
 
-import android.content.Context
 import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -37,17 +36,44 @@ class ShakeActivity : BindingActivity<ActivityShakeBinding>({ ActivityShakeBindi
     private val viewModel by viewModels<ShakeViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        sensorUtil = SensorUtil()
-        vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            val vibratorManager =
-                getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
-            vibratorManager.defaultVibrator
-        } else {
-            getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-        }
-        mSensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+        initVibrator()
+        initSensor()
+        observeShakeState()
+        observeCount()
+        observeShakeFlag()
+        initBtnClickListener()
+    }
 
+    private fun initBtnClickListener() {
+        binding.tvShakeBackhome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+        binding.tvShakeHealing.setOnClickListener {
+            val intent = Intent(this, HealingActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun observeShakeFlag() {
+        viewModel.shakeFlag.flowWithLifecycle(lifecycle).onEach {
+            if (it) {
+                binding.tvShakeTitle.text = "돌의 모양이 변했어요!"
+                binding.tvShakeSubtitle.text = "오늘 하루도 마음의 평온에\n한 발자국 다가갔네요"
+            }
+        }
+    }
+
+    private fun observeCount() {
+        viewModel.count.flowWithLifecycle(lifecycle).onEach {
+            when {
+                it > 30 -> viewModel.endShaking()
+            }
+        }.launchIn(lifecycleScope)
+    }
+
+    private fun observeShakeState() {
         viewModel.shakeState.flowWithLifecycle(lifecycle).onEach {
             when (it) {
                 ShakeState.BeforeShaking -> {
@@ -83,29 +109,21 @@ class ShakeActivity : BindingActivity<ActivityShakeBinding>({ ActivityShakeBindi
                 }
             }
         }.launchIn(lifecycleScope)
+    }
 
-        viewModel.count.flowWithLifecycle(lifecycle).onEach {
-            when {
-                it > 30 -> viewModel.endShaking()
-            }
-        }.launchIn(lifecycleScope)
+    private fun initSensor() {
+        sensorUtil = SensorUtil()
+        mSensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+    }
 
-        viewModel.shakeFlag.flowWithLifecycle(lifecycle).onEach {
-            if (it) {
-
-                binding.tvShakeTitle.text = "돌의 모양이 변했어요!"
-                binding.tvShakeSubtitle.text = "오늘 하루도 마음의 평온에\n한 발자국 다가갔네요"
-            }
-        }
-
-        binding.tvShakeBackhome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
-        binding.tvShakeHealing.setOnClickListener {
-            val intent = Intent(this, HealingActivity::class.java)
-            startActivity(intent)
+    private fun initVibrator() {
+        vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vibratorManager =
+                getSystemService(VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            vibratorManager.defaultVibrator
+        } else {
+            getSystemService(VIBRATOR_SERVICE) as Vibrator
         }
     }
 

@@ -18,21 +18,11 @@ class MainActivity : BindingActivity<ActivityMainBinding>({ ActivityMainBinding.
         super.onCreate(savedInstanceState)
 
         viewModel.getTodayStone()
+        observeStoneData()
+        initBtnClickListener()
+    }
 
-        viewModel.stoneData.observe(this) {
-            if (it.answer == null) {
-                binding.ivMainStone.load(it.uglyImage)
-                binding.tvMainTitle.text = "오늘의 도를 깎아볼까요?"
-                binding.tvMainSubtitle.text = "울퉁불퉁 돌을 눌러 도를 깎으러 가보아요!"
-                binding.tvMainCheckHealing.isGone = true
-            } else {
-                binding.ivMainStone.load(it.prettyImage)
-                binding.tvMainTitle.text = "오늘 깎은 돌"
-                binding.tvMainSubtitle.text = "반질반질 둥근 돌"
-                binding.tvMainCheckHealing.isVisible = true
-            }
-        }
-
+    private fun initBtnClickListener() {
         binding.ivMainStone.setOnClickListener {
             if (viewModel.stoneData.value?.answer == null) {
                 val intent = Intent(this, QuestionActivity::class.java)
@@ -50,6 +40,22 @@ class MainActivity : BindingActivity<ActivityMainBinding>({ ActivityMainBinding.
         binding.tvMainCheckHealing.setOnClickListener {
             val intent = Intent(this, HealingActivity::class.java)
             startActivity(intent)
+        }
+    }
+
+    private fun observeStoneData() {
+        viewModel.stoneData.observe(this) {
+            if (it.answer == null) {
+                binding.ivMainStone.load(it.uglyImage)
+                binding.tvMainTitle.text = "오늘의 도를 깎아볼까요?"
+                binding.tvMainSubtitle.text = "울퉁불퉁 돌을 눌러 도를 깎으러 가보아요!"
+                binding.tvMainCheckHealing.isGone = true
+            } else {
+                binding.ivMainStone.load(it.prettyImage)
+                binding.tvMainTitle.text = "오늘 깎은 돌"
+                binding.tvMainSubtitle.text = "반질반질 둥근 돌"
+                binding.tvMainCheckHealing.isVisible = true
+            }
         }
     }
 }

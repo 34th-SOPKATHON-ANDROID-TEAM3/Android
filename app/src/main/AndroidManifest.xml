@@ -34,17 +34,14 @@
         <activity
             android:name=".presentation.question.QuestionActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".presentation.calendar.CalendarActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".presentation.main.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".presentation.dummy.DummyActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
