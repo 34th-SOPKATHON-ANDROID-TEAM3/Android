@@ -1,7 +1,7 @@
-<img width="1879" alt="Group 3" src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/d9271f82-b25a-4fda-a151-b09899254528"> </br>
-
+![Group 5](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/440dab20-6fd4-4fad-82e7-632116eb16b6) </br>
 
 ## 🪨 도를 깎자
+
 **지친 오늘, 돌을 깎으며 마음의 평온에 도달해보세요.** </br> 
 
 ## 🔢 목차
