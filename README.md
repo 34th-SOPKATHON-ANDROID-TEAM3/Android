@@ -42,7 +42,7 @@
 |<img src="https://avatars.githubusercontent.com/u/113014331?v=4" width="128" />|<img src="https://avatars.githubusercontent.com/u/91470334?v=4" width="128" />|<img src="https://avatars.githubusercontent.com/u/131870144?v=4" width="128" />|<img src="https://avatars.githubusercontent.com/u/109855280?v=4" width="128" />| 
 |:---------:|:---------:|:---------:|:---------:|
 |[👑우상욱](https://github.com/Sangwook123)|[이가을](https://github.com/gaeulzzang)|[김윤서](https://github.com/yskim6772)|[이나경](https://github.com/nagaeng)|
-| `Main Screen` | `Calendar Screen` | `Question Screen` | `Detail Screen`|
+| `Main Screen`,`Shake Screen`,`Healing Screen` | `Calendar Screen`,`Alert Dialog` | `Question Screen`, `Design System` | `Detail Screen`,`Splash Screen`|
 
 ## ❗ 컨벤션 규칙 및 브랜치 전략
 **패키지 컨벤션:**  [Package Convention](https://www.notion.so/Package-Convention-e0f0046ceedb4398ba48dfcc762cd0f6) </br>
