@@ -6,8 +6,8 @@
     </style>
 
     <style name="Typography.Sopkathon.Android3.Display1">
-        <item name="fontFamily">@font/pretendard_semibold</item>
-        <item name="android:textSize">56sp</item>
+        <item name="fontFamily">@font/gothic_bold</item>
+        <item name="android:textSize">60sp</item>
     </style>
 
     <style name="Typography.Sopkathon.Android3.Display2">
@@ -15,21 +15,26 @@
         <item name="android:textSize">48sp</item>
     </style>
 
+    <style name="Typography.Sopkathon.Android3.Display3">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
     <style name="Typography.Sopkathon.Android3.Headline1">
-        <item name="fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">32sp</item>
+        <item name="fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:letterSpacing">-0.01</item>
     </style>
 
     <style name="Typography.Sopkathon.Android3.Headline2">
-        <item name="fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:letterSpacing">-0.01</item>
     </style>
 
     <style name="Typography.Sopkathon.Android3.Headline3">
         <item name="fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:letterSpacing">-0.01</item>
     </style>
 

@@ -2,8 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.SopkathonAndroid3" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:statusBarColor">@color/black</item>
+        <item name="colorPrimary">@color/green45</item>
+        <item name="colorOnPrimary">@color/background</item>
+        <item name="android:statusBarColor">@color/neutral0</item>
     </style>
 
     <style name="Theme.SopkathonAndroid3" parent="Base.Theme.SopkathonAndroid3" />

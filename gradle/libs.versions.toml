@@ -34,6 +34,9 @@ okhttp = "4.12.0"
 timber = "5.0.1"
 coil = "2.4.0"
 ktlint = "12.0.3"
+activity = "1.8.0"
+
+filpview = "3.0.3"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -76,7 +79,9 @@ okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref 
 okhttp-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-gif = { group = "io.coil-kt", name = "coil-gif", version.ref = "coil" }
 
+flip-view = { group = "com.wajahatkarim", name = "EasyFlipView", version.ref = "filpview" }
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

@@ -1,7 +1,6 @@
 ![Group 5](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/440dab20-6fd4-4fad-82e7-632116eb16b6) </br>
 
 ## 🪨 도를 깎자
-
 **지친 오늘, 돌을 깎으며 마음의 평온에 도달해보세요.** </br> 
 
 ## 🔢 목차
@@ -44,6 +43,7 @@
 |[👑우상욱](https://github.com/Sangwook123)|[이가을](https://github.com/gaeulzzang)|[김윤서](https://github.com/yskim6772)|[이나경](https://github.com/nagaeng)|
 | `Main Screen`,`Shake Screen`,`Healing Screen` | `Calendar Screen`,`Alert Dialog` | `Question Screen`, `Design System` | `Detail Screen`,`Splash Screen`|
 
+
 ## ❗ 컨벤션 규칙 및 브랜치 전략
 **패키지 컨벤션:**  [Package Convention](https://www.notion.so/Package-Convention-e0f0046ceedb4398ba48dfcc762cd0f6) </br>
 **깃 컨벤션:**  [Git Convention](https://www.notion.so/Git-Convention-e0baf9c0f46c478e95b8e7533ea5516f) </br>
@@ -65,6 +65,7 @@
 ┃ ┣ 📂 splash
 ┣ 📂 util
 ```
+
 </br>
 
 ## 📷 안주들 사진 (before)
@@ -76,7 +77,4 @@
 
 ![KakaoTalk_20240519_052651821](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/d6335ebd-a1e5-413b-a906-b9f5d022eec1) </br>
 ![KakaoTalk_20240519_052651821_01](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/6499e551-f1d1-4c6a-b925-52715a295512)
-
-
-
 

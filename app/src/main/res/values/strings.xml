@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">Sopkathon Android3</string>
+    <string name="app_name">돌을깎자</string>
+    <string name="healing_filp"><u>터치하여 뒤집기</u></string>
+    <string name="main_check_healing"><u>힐링카드 확인하기</u></string>
+    <string name="tv_calendar_year">2023</string>
+    <string name="tv_calendar_month_number">5</string>
+    <string name="tv_calendar_month_text">월</string>
+    <string name="textViewNumber">#1 / 5월 19일</string>
+    <string name="tv_healing_card_back_title">오늘의 힐링 카드</string>
+    <string name="fl_front_layer">앞면</string>
+    <string name="tv_main_date">5월 19일</string>
+    <string name="tv_main_title">오늘의 도를 깎아볼까요?</string>
+    <string name="tv_main_subtitle">울퉁불퉁 돌을 눌러 도를 깎으러 가보아요!</string>
+    <string name="tv_question_number_unit">#</string>
+    <string name="tv_question_number">1</string>
+    <string name="tv_month">5</string>
+    <string name="tv_question">오늘 하루, 감사한 사람과\n그 이유는 무엇인가요?</string>
+    <string name="et_answer">이곳을 눌러 답변을 입력해주세요</string>
+    <string name="tv_shake_date">5월 19일</string>
+    <string name="tv_shake_title">오늘의 도를 깎아볼까요?</string>
+    <string name="tv_shake_subtitle">울퉁불퉁 돌을 눌러 도를 깎으러 가보아요!</string>
+    <string name="tv_shake_backhome">홈으로 돌아가기</string>
+    <string name="tv_shake_healing">힐링카드 확인하기</string>
+    <string name="tv_calendar_dialog_warning_header">돌 리포트가 없어요</string>
+    <string name="tv_calendar_dialog_comment1">이날 도를 깎지 못했어요</string>
+    <string name="tv_calendar_dialog_comment2">다음 번에는 꼭 하루 한 번 깎아주세요!</string>
+    <string name="btn_calendar_dialog_confirm">확인</string>
+    <string name="tv_calendar_title">월간 돌 리포트</string>
+    <string name="tv_save">저장</string>
+    <string name="tv_month_unit">월</string>
+    <string name="tv_day">19</string>
+    <string name="tv_day_unit">일</string>
 </resources>

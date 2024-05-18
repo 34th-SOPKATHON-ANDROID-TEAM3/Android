@@ -78,6 +78,10 @@ dependencies {
 
     // coil
     implementation(libs.coil)
+    implementation(libs.coil.gif)
+
+    // flipview
+    implementation(libs.flip.view)
 
     // test
     testImplementation(libs.junit)

@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RequestDummyDto(
-    @SerialName("id")
-    val id: String,
+data class RequestPatchAnswerDto(
+    @SerialName("answer")
+    val answer: String,
 )
