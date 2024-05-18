@@ -24,7 +24,10 @@
 </br>
 
 ## 👤 팀원별 역할 분담
-</br>
+|<img src="https://avatars.githubusercontent.com/u/113014331?v=4" width="128" />|<img src="https://avatars.githubusercontent.com/u/91470334?v=4" width="128" />|<img src="https://avatars.githubusercontent.com/u/131870144?v=4" width="128" />|<img src="https://avatars.githubusercontent.com/u/109855280?v=4" width="128" />| 
+|:---------:|:---------:|:---------:|:---------:|
+|[👑우상욱](https://github.com/Sangwook123)|[이가을](https://github.com/gaeulzzang)|[김윤서](https://github.com/yskim6772)|[이나경](https://github.com/nagaeng)|
+| `Main Screen` | `Calendar Screen` | `Question Screen` | `Detail Screen`|
 
 ## ❗ 컨벤션 규칙 및 브랜치 전략
 **패키지 컨벤션:**  [Package Convention](https://www.notion.so/Package-Convention-e0f0046ceedb4398ba48dfcc762cd0f6) </br>
@@ -33,7 +36,20 @@
 **브랜치 전략:**  [Branch Strategy](https://www.notion.so/Branch-Strategy-294c42ae7da9436c911aa9f66c043911) </br>
 
 ## 🗂️ 폴더링
-</br>
+```
+📂 org.sopt.sopkathon.android3
+┣ 📂 data
+┃ ┣ 📂 interceptor
+┃ ┣ 📂 model
+┃ ┣ 📂 service
+┣ 📂 presentation
+┃ ┣ 📂 main
+┃ ┣ 📂 detail
+┃ ┣ 📂 question
+┃ ┣ 📂 calendar
+┃ ┣ 📂 splash
+┣ 📂 util
+```
 
 ## 📷 안주들 사진 (before)
 ![KakaoTalk_20240518_220223330_03](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/cf9b91c5-8794-49ca-9355-72b60e95203d) </br>
