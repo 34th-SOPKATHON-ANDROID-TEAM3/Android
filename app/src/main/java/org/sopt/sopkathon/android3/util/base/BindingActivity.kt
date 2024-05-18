@@ -9,18 +9,18 @@ import androidx.viewbinding.ViewBinding
 import org.sopt.sopkathon.android3.util.context.hideKeyboard
 
 abstract class BindingActivity<T : ViewBinding>(
-  private val inflater: (LayoutInflater) -> T,
+    private val inflater: (LayoutInflater) -> T,
 ) : AppCompatActivity() {
-  protected lateinit var binding: T
+    protected lateinit var binding: T
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    binding = inflater(layoutInflater)
-    setContentView(binding.root)
-  }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = inflater(layoutInflater)
+        setContentView(binding.root)
+    }
 
-  override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-    hideKeyboard(currentFocus ?: View(this))
-    return super.dispatchTouchEvent(ev)
-  }
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        hideKeyboard(currentFocus ?: View(this))
+        return super.dispatchTouchEvent(ev)
+    }
 }
