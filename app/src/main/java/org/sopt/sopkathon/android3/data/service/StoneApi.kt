@@ -19,7 +19,7 @@ interface StoneApi {
     @GET("stones")
     suspend fun getCollectedStones(
     ): List<ResponseGetCollectedStonesDto>
-    @GET("stones")
+    @GET("stones/{stoneId}")
     suspend fun getStoneDetail(
         @Path("stoneId") stoneId: Int
     ): ResponseGetStoneDetailDto

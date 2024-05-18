@@ -1,11 +1,14 @@
 package org.sopt.sopkathon.android3.presentation.calendar
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import org.sopt.sopkathon.android3.databinding.ActivityCalendarBinding
 import org.sopt.sopkathon.android3.presentation.calendar.adapter.CalendarAdapter
+import org.sopt.sopkathon.android3.presentation.detail.DetailActivity
 import org.sopt.sopkathon.android3.util.base.BindingActivity
+import org.sopt.sopkathon.android3.util.context.dialogFragmentResize
 import java.util.Calendar
 
 class CalendarActivity :
@@ -21,25 +24,23 @@ class CalendarActivity :
                 val calendarWarningDialog = CalendarWarningDialogFragment()
                 calendarWarningDialog.show(supportFragmentManager, calendarWarningDialog.tag)
             } else {
-                // val intent = Intent(this, DetailActivity::class.java)
+                val intent = Intent(this, DetailActivity::class.java)
                 intent.putExtra(ROCK_ID, it.id)
                 startActivity(intent)
             }
         }
         binding.rvCalendar.run {
             adapter = calendarAdapter
-            layoutManager = GridLayoutManager(this@CalendarActivity, 5)
         }
-
-        viewModel.fetchRockInfo()
         viewModel.rockList.observe(this) {
             calendarAdapter.submitList(it)
         }
+        viewModel.fetchRockInfo()
     }
 
     private fun initView() {
-        binding.tvCalendarYear.text = Calendar.getInstance().get(Calendar.YEAR).toString()
-        binding.tvCalendarMonthNumber.text = Calendar.getInstance().get(Calendar.MONTH).toString()
+        binding.tvCalendarYear.text = "2024"
+        binding.tvCalendarMonthNumber.text = "5"
     }
 
     companion object {
