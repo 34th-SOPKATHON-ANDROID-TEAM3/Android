@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Key Color -->
+    <color name="green45">#107142</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Gray Scale Color -->
+    <color name="neutral0">#000000</color>
+    <color name="neutral10">#191C1A</color>
+    <color name="neutral20">#2E312E</color>
+    <color name="neutral30">#444744</color>
+    <color name="neutral40">#5C5F5C</color>
+    <color name="neutral50">#757874</color>
+    <color name="neutral60">#8F918E</color>
+    <color name="neutral70">#A9ACA8</color>
+    <color name="neutral80">#C5C7C3</color>
+    <color name="neutral90">#E1E3DF</color>
+    <color name="neutral95">#EFF1ED</color>
+    <color name="neutral98">#F8FAF5</color>
+    <color name="neutral100">#FFFFFF</color>
+
 </resources>
