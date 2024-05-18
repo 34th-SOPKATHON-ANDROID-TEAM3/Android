@@ -1,5 +1,4 @@
-
-<img width="1879" alt="Group 2" src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/ba585d29-7652-4e97-a262-e5926ef896c5">
+<img width="1879" alt="Group 2 (1)" src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/866da1cc-5121-478b-8b63-352ff6edc4c2"> </br>
 
 ## 🪨 도를 깎자
 **지친 오늘, 돌을 깎으며 마음의 평온에 도달해보세요.** </br> 
@@ -50,8 +49,16 @@
 ┃ ┣ 📂 splash
 ┣ 📂 util
 ```
-
+</br>
 ## 📷 안주들 사진 (before)
 ![KakaoTalk_20240518_220223330_03](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/cf9b91c5-8794-49ca-9355-72b60e95203d) </br>
-![KakaoTalk_20240518_224325262](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/a4879465-c711-40c6-be0b-2d7797569807)
+![KakaoTalk_20240518_224325262](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/a4879465-c711-40c6-be0b-2d7797569807) </br>
+
+## 📷 안주들 사진 (after)
+
+![KakaoTalk_20240519_052651821](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/d6335ebd-a1e5-413b-a906-b9f5d022eec1) </br>
+![KakaoTalk_20240519_052651821_01](https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/6499e551-f1d1-4c6a-b925-52715a295512)
+
+
+
 
