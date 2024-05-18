@@ -79,6 +79,9 @@ dependencies {
     // coil
     implementation(libs.coil)
 
+    // flipview
+    implementation(libs.filp.view)
+
     // test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
