@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_date_bar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_date_bar"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="20sp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_date_bar"/>
+
+    <TextView
+        android:id="@+id/tv_month_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="월"
+        android:textSize="20sp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@id/tv_month"
+        app:layout_constraintTop_toTopOf="@id/iv_date_bar"/>
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19"
+        android:textSize="20sp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@id/tv_month_unit"
+        app:layout_constraintTop_toTopOf="@id/iv_date_bar"/>
+
+    <TextView
+        android:id="@+id/tv_day_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일"
+        android:textSize="20sp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@id/tv_day"
+        app:layout_constraintTop_toTopOf="@id/iv_date_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/iv_date_bar"
+        app:layout_constraintTop_toTopOf="@id/iv_date_bar"/>
+
+    <TextView
+        android:id="@+id/tv_question_number_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        android:textSize="14sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_date_bar"/>
+
+    <TextView
+        android:id="@+id/tv_question_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="14sp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toEndOf="@id/tv_question_number_unit"
+        app:layout_constraintTop_toBottomOf="@id/iv_date_bar"/>
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 하루, 감사한 사람과\n그 이유는 무엇인가요?"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_question_number_unit"
+        app:layout_constraintTop_toBottomOf="@id/tv_question_number_unit"/>
+
+    <ImageView
+        android:id="@+id/iv_answer_box"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_answer_box"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"/>
+
+    <EditText
+        android:id="@+id/et_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="이곳을 눌러 답변을 입력해주세요"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:background="@null"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        app:layout_constraintStart_toStartOf="@id/iv_answer_box"
+        app:layout_constraintEnd_toEndOf="@id/iv_answer_box"
+        app:layout_constraintTop_toTopOf="@id/iv_answer_box"/>
+
+    <ImageView
+        android:id="@+id/iv_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_btn_save"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_btn_save"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
