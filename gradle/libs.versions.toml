@@ -35,6 +35,8 @@ timber = "5.0.1"
 coil = "2.4.0"
 ktlint = "12.0.3"
 
+filpview = "3.0.3"
+
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -77,6 +79,7 @@ okhttp-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "
 
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 
+filp-view = { group = "com.wajahatkarim", name = "EasyFlipView", version.ref = "filpview"}
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
