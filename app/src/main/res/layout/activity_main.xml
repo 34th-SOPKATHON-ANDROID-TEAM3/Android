@@ -5,56 +5,104 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/neutral98"
     tools:context=".presentation.main.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@color/green45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/ic_stone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_main_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/v_main_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/neutral90"
+        app:layout_constraintTop_toBottomOf="@id/cl_main_top_bar" />
+
 
     <TextView
         android:id="@+id/tv_main_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:text="5월 19일"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/Typography.Sopkathon.Android3.Headline2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/cl_main_top_bar" />
+
 
     <ImageView
-        android:id="@+id/iv_main_calendar"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/iv_main_stone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/img_ugly_rock"
+        app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_date" />
 
     <TextView
         android:id="@+id/tv_main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="오늘의 도를 깎아볼까요?"
         android:layout_marginTop="50dp"
-        android:textAppearance="@style/Typography.Sopkathon.Android3.Headline3"
-        app:layout_constraintTop_toBottomOf="@id/tv_main_date"
+        android:text="오늘의 도를 깎아볼까요?"
+        android:textAppearance="@style/Typography.Sopkathon.Android3.Headline1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/iv_main_stone" />
 
     <TextView
         android:id="@+id/tv_main_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="울퉁불퉁 돌을 눌러 도를 깎으러 가보아요!"
-        app:layout_constraintTop_toBottomOf="@id/tv_main_title"
+        android:textAppearance="@style/Typography.Sopkathon.Android3.Body2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tv_main_title" />
 
-    <ImageView
-        android:id="@+id/iv_main_stone"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="30dp"
-        tools:src="@drawable/ic_launcher_background"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintTop_toBottomOf="@id/tv_main_subtitle"
+    <TextView
+        android:id="@+id/tv_main_check_healing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="22dp"
+        android:visibility="gone"
+        android:text="@string/main_check_healing"
+        android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
+        android:textColor="@color/green45"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tv_main_subtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

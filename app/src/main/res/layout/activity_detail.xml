@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     android:background="@color/neutral98"
     tools:context=".presentation.detail.DetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_question_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@color/green45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stone"
+            android:layout_marginTop="43dp"
+            android:layout_marginStart="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textViewNumber"

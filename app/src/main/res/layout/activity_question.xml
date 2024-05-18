@@ -5,23 +5,25 @@
     android:background="@color/background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/iv_date_bar"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_question_top_bar"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:src="@drawable/ic_date_bar"
+        android:layout_height="87dp"
+        android:background="@color/green45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_logo_white"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="19dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stone"
+            android:layout_marginTop="43dp"
+            android:layout_marginStart="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tv_question_number_unit"
@@ -32,7 +34,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_date_bar"/>
+        app:layout_constraintTop_toBottomOf="@id/cl_question_top_bar"/>
 
     <TextView
         android:id="@+id/tv_question_number"
@@ -42,7 +44,7 @@
         android:textAppearance="@style/Typography.Sopkathon.Android3.Body3"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toEndOf="@id/tv_question_number_unit"
-        app:layout_constraintTop_toBottomOf="@id/iv_date_bar"/>
+        app:layout_constraintTop_toBottomOf="@id/cl_question_top_bar"/>
     
     <ImageView
         android:id="@+id/iv_dot"
