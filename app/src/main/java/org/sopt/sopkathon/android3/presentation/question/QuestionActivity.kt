@@ -46,8 +46,6 @@ class QuestionActivity :
                 val answerText = binding.etAnswer.text.toString()
                 if (answerText.isNotEmpty()) {
                     viewModel.patchAnswer(answerText)
-                } else {
-                    Toast.makeText(this, "답변을 입력해주세요.", Toast.LENGTH_SHORT).show()
                 }
             }
         }
