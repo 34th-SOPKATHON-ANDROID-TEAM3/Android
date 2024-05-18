@@ -10,18 +10,17 @@ import org.sopt.sopkathon.android3.databinding.ActivityMainBinding
 import org.sopt.sopkathon.android3.presentation.calendar.CalendarActivity
 import org.sopt.sopkathon.android3.presentation.healing.HealingActivity
 import org.sopt.sopkathon.android3.presentation.question.QuestionActivity
-import org.sopt.sopkathon.android3.presentation.shake.ShakeActivity
 import org.sopt.sopkathon.android3.util.base.BindingActivity
 
-class MainActivity : BindingActivity<ActivityMainBinding>({ ActivityMainBinding.inflate(it)}) {
+class MainActivity : BindingActivity<ActivityMainBinding>({ ActivityMainBinding.inflate(it) }) {
     private val viewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         viewModel.getTodayStone()
 
-        viewModel.stoneData.observe(this){
-            if(it.answer == null){
+        viewModel.stoneData.observe(this) {
+            if (it.answer == null) {
                 binding.ivMainStone.load(it.uglyImage)
                 binding.tvMainTitle.text = "오늘의 도를 깎아볼까요?"
                 binding.tvMainSubtitle.text = "울퉁불퉁 돌을 눌러 도를 깎으러 가보아요!"
@@ -35,7 +34,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>({ ActivityMainBinding.
         }
 
         binding.ivMainStone.setOnClickListener {
-            if(viewModel.stoneData.value?.answer == null){
+            if (viewModel.stoneData.value?.answer == null) {
                 val intent = Intent(this, QuestionActivity::class.java)
                 intent.putExtra("question", viewModel.stoneData.value?.question)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

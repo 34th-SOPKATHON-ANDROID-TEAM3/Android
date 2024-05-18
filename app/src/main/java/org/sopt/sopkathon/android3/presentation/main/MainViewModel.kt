@@ -10,10 +10,10 @@ import org.sopt.sopkathon.android3.data.ServicePool
 import org.sopt.sopkathon.android3.data.model.response.ResponseGetTodayStoneDto
 import retrofit2.HttpException
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
     private val stoneApi by lazy { ServicePool.stoneApi }
     private val _stoneData = MutableLiveData<ResponseGetTodayStoneDto>()
-    val stoneData : LiveData<ResponseGetTodayStoneDto> get() = _stoneData
+    val stoneData: LiveData<ResponseGetTodayStoneDto> get() = _stoneData
 
     fun getTodayStone() = viewModelScope.launch {
         runCatching {
@@ -21,7 +21,7 @@ class MainViewModel: ViewModel() {
         }.onSuccess {
             _stoneData.value = it
         }.onFailure {
-            if(it is HttpException){
+            if (it is HttpException) {
                 Log.e("서버 에러", it.message())
             } else {
                 Log.e("에러", it.message.toString())

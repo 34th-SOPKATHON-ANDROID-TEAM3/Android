@@ -8,9 +8,8 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import org.sopt.sopkathon.android3.data.ServicePool
 import org.sopt.sopkathon.android3.data.model.response.ResponseGetStoneDetailDto
-import org.sopt.sopkathon.android3.data.service.StoneApi
 
-class DetailViewModel: ViewModel() {
+class DetailViewModel : ViewModel() {
     private val service = ServicePool.stoneApi
 
     private val _detailData = MutableLiveData<ResponseGetStoneDetailDto>()
@@ -23,7 +22,7 @@ class DetailViewModel: ViewModel() {
             }.onSuccess {
                 _detailData.value = it
             }.onFailure {
-                Log.e("실패",it.message.toString())
+                Log.e("실패", it.message.toString())
             }
         }
     }

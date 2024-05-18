@@ -13,5 +13,5 @@ data class ResponseGetTodayStoneDto(
     @SerialName("uglyImage")
     val uglyImage: String,
     @SerialName("answer")
-    val answer: String?
+    val answer: String?,
 )

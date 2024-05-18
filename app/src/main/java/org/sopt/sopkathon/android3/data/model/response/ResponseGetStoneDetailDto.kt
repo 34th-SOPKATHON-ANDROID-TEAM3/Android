@@ -13,5 +13,5 @@ data class ResponseGetStoneDetailDto(
     @SerialName("question")
     val question: String,
     @SerialName("stoneImage")
-    val stoneImage: String
+    val stoneImage: String,
 )

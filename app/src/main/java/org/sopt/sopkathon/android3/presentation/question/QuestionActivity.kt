@@ -9,7 +9,8 @@ import org.sopt.sopkathon.android3.presentation.shake.ShakeActivity
 import org.sopt.sopkathon.android3.util.base.BindingActivity
 import org.sopt.sopkathon.android3.util.context.toast
 
-class QuestionActivity : BindingActivity<ActivityQuestionBinding>({ ActivityQuestionBinding.inflate(it)}) {
+class QuestionActivity :
+    BindingActivity<ActivityQuestionBinding>({ ActivityQuestionBinding.inflate(it) }) {
 
     private val viewModel by viewModels<QuestionViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,7 @@ class QuestionActivity : BindingActivity<ActivityQuestionBinding>({ ActivityQues
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                 }
+
                 is QuestionState.Failure -> {
                     toast("오류 발생 : ${state.msg}")
                 }
