@@ -4,6 +4,7 @@
     <!-- Key Color -->
     <color name="green45">#107142</color>
     <color name="white">#FFFFFF</color>
+    <color name="background">#F9F6EE</color>
 
     <!-- Gray Scale Color -->
     <color name="neutral0">#000000</color>
