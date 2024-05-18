@@ -78,6 +78,7 @@ dependencies {
 
     // coil
     implementation(libs.coil)
+    implementation(libs.androidx.activity)
 
     // flipview
     implementation(libs.filp.view)
