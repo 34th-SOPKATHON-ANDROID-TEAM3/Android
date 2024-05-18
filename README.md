@@ -22,6 +22,20 @@
 **매일 한 가지의 자아성찰 문답과 휴대폰에 내장된 자이로 센서를 활용한 돌깎기를 통해 심신수양을 실천하며 마음의 균형을 찾는다.** </br>
 
 ## 📹 시연 영상
+
+**전체 영상**
+
+|<img src="https://s4.ezgif.com/tmp/ezgif-4-0e84ca6114.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-8984c4532f.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-9262cd9e61.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-597d060a81.gif" width=70%>|
+|:---------:|:---------:|:---------:|:---------:|
+|Splash 화면|메인 화면|오늘의 질문|돌 깎기|  
+
+|<img src="https://s4.ezgif.com/tmp/ezgif-4-2b581a6bd7.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-a3d2f2b3c5.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-85fe8a30de.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-708e101327.gif" width=70%>|
+|:---------:|:---------:|:---------:|:---------:|
+|행운 카드|돌 깎인 후 메인|캘린더 (돌 모음)|예쁜 돌(기록) 클릭|
+
+|<img src="https://s4.ezgif.com/tmp/ezgif-4-0e1518bfbf.gif" width=70% />|
+|:---------:|
+|못생긴 돌(기록x) 클릭! 
 </br>
 
 ## 👤 팀원별 역할 분담
