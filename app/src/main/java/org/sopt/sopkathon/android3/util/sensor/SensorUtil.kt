@@ -38,7 +38,7 @@ class SensorUtil {
 
     companion object {
         private const val DELAY_SHAKE = 500
-        private const val SHAKE_THRESHOLD_GRAVITY = 2.0f
+        private const val SHAKE_THRESHOLD_GRAVITY = 1.5f
         private const val SHAKE_ACCESS_COUNT = 2
     }
 }
