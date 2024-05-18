@@ -11,7 +11,6 @@ import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
@@ -29,7 +28,7 @@ import org.sopt.sopkathon.android3.util.base.BindingActivity
 import org.sopt.sopkathon.android3.util.sensor.SensorUtil
 import org.sopt.sopkathon.android3.util.view.loadGif
 
-class ShakeActivity: BindingActivity<ActivityShakeBinding>({ActivityShakeBinding.inflate(it)}) {
+class ShakeActivity : BindingActivity<ActivityShakeBinding>({ ActivityShakeBinding.inflate(it) }) {
     private lateinit var mSensorManager: SensorManager
     private var mAccelerometer: Sensor? = null
     private var shakeEnable = true
@@ -40,7 +39,8 @@ class ShakeActivity: BindingActivity<ActivityShakeBinding>({ActivityShakeBinding
         super.onCreate(savedInstanceState)
         sensorUtil = SensorUtil()
         vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            val vibratorManager = getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            val vibratorManager =
+                getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
             vibratorManager.defaultVibrator
         } else {
             getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
@@ -49,13 +49,14 @@ class ShakeActivity: BindingActivity<ActivityShakeBinding>({ActivityShakeBinding
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
         viewModel.shakeState.flowWithLifecycle(lifecycle).onEach {
-            when(it){
+            when (it) {
                 ShakeState.BeforeShaking -> {
                     binding.tvShakeBackhome.isGone = true
                     binding.tvShakeHealing.isGone = true
                     binding.tvShakeTitle.text = "휴대폰을 흔들어 돌을 깎아주세요"
                     binding.tvShakeSubtitle.text = "흔들수록 내 고민이 멀리 날아가요"
                 }
+
                 ShakeState.CompleteShaking -> {
                     binding.tvShakeBackhome.isVisible = true
                     binding.tvShakeHealing.isVisible = true
@@ -65,6 +66,7 @@ class ShakeActivity: BindingActivity<ActivityShakeBinding>({ActivityShakeBinding
                     binding.tvShakeSubtitle.text = "오늘 하루도 마음의 평온에\n한 발자국 다가갔네요"
                     viewModel.finishAnimating()
                 }
+
                 ShakeState.UntilShaking -> {
                     binding.tvShakeBackhome.isGone = true
                     binding.tvShakeHealing.isGone = true
@@ -83,13 +85,13 @@ class ShakeActivity: BindingActivity<ActivityShakeBinding>({ActivityShakeBinding
         }.launchIn(lifecycleScope)
 
         viewModel.count.flowWithLifecycle(lifecycle).onEach {
-            when{
+            when {
                 it > 30 -> viewModel.endShaking()
             }
         }.launchIn(lifecycleScope)
 
         viewModel.shakeFlag.flowWithLifecycle(lifecycle).onEach {
-            if(it){
+            if (it) {
 
                 binding.tvShakeTitle.text = "돌의 모양이 변했어요!"
                 binding.tvShakeSubtitle.text = "오늘 하루도 마음의 평온에\n한 발자국 다가갔네요"
@@ -132,7 +134,7 @@ class ShakeActivity: BindingActivity<ActivityShakeBinding>({ActivityShakeBinding
 
 
                 if (sensorUtil.isShake(axisX, axisY, axisZ) && shakeEnable) {
-                    if(viewModel.shakeState.value == ShakeState.BeforeShaking)
+                    if (viewModel.shakeState.value == ShakeState.BeforeShaking)
                         viewModel.startShaking()
                     viewModel.addCount()
                     vibratePhone()

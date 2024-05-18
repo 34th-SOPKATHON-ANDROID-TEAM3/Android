@@ -3,13 +3,10 @@ package org.sopt.sopkathon.android3.presentation.calendar
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.recyclerview.widget.GridLayoutManager
 import org.sopt.sopkathon.android3.databinding.ActivityCalendarBinding
 import org.sopt.sopkathon.android3.presentation.calendar.adapter.CalendarAdapter
 import org.sopt.sopkathon.android3.presentation.detail.DetailActivity
 import org.sopt.sopkathon.android3.util.base.BindingActivity
-import org.sopt.sopkathon.android3.util.context.dialogFragmentResize
-import java.util.Calendar
 
 class CalendarActivity :
     BindingActivity<ActivityCalendarBinding>({ ActivityCalendarBinding.inflate(it) }) {
