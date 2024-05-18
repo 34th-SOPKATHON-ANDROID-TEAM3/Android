@@ -1,13 +1,10 @@
-package org.sopt.sopkathon.android3.presentation
+package org.sopt.sopkathon.android3.util.sensor
 
 import android.hardware.SensorManager
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-object SensorUtil {
-    private const val DELAY_SHAKE = 500
-    private const val SHAKE_THRESHOLD_GRAVITY = 2.5f
-    private const val SHAKE_ACCESS_COUNT = 2
+class SensorUtil {
     private var shakeTime = 0L
     private var shakeCount = 0
 
@@ -37,5 +34,11 @@ object SensorUtil {
             return true
         }
         return false
+    }
+
+    companion object {
+        private const val DELAY_SHAKE = 500
+        private const val SHAKE_THRESHOLD_GRAVITY = 2.5f
+        private const val SHAKE_ACCESS_COUNT = 2
     }
 }
