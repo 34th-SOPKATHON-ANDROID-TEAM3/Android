@@ -6,37 +6,56 @@
     android:layout_height="match_parent"
     android:background="@color/neutral98"
     tools:context=".presentation.detail.DetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_question_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@color/green45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stone"
+            android:layout_marginTop="43dp"
+            android:layout_marginStart="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textViewNumber"
+        android:id="@+id/text_view_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20sp"
         android:layout_marginTop="128sp"
         android:layout_marginEnd="20sp"
-        android:text="#1 / 5월 19일"
-        android:textSize="15dp"
+        android:text="@string/textViewNumber"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewQuestion"
+        android:id="@+id/text_view_question"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20sp"
         android:layout_marginEnd="20sp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textAppearance="@style/Typography.Sopkathon.Android3.Headline2"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNumber"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_number"
         tools:text="오늘 하루, 감사한 사람과 \n그 이유는 무엇인가요?" />
 
     <ImageView
-        android:id="@+id/imgRock"
+        android:id="@+id/img_rock"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="40sp"
@@ -44,22 +63,22 @@
         app:layout_constraintDimensionRatio="1"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_question"
         tools:src="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/textViewAnswer"
+        android:id="@+id/text_view_answer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
         android:layout_marginStart="40sp"
         android:layout_marginEnd="40sp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textAppearance="@style/Typography.Sopkathon.Android3.Body2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgRock"
+        app:layout_constraintTop_toBottomOf="@+id/img_rock"
         tools:text="오늘 솝커톤을 함께 해 준 인삼보다 안삼 팀원들에게 감사함을 느꼈다. 밤 새느라 많이 힘들었을텐데 포기하지 않고 끝까지 솝커톤을 마친 우리 팀원들에게 박수!" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

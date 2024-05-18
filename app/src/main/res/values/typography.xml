@@ -6,7 +6,7 @@
     </style>
 
     <style name="Typography.Sopkathon.Android3.Display1">
-        <item name="fontFamily">@font/pretendard_semibold</item>
+        <item name="fontFamily">@font/gothic_bold</item>
         <item name="android:textSize">60sp</item>
     </style>
 

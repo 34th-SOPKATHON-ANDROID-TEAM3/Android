@@ -12,15 +12,18 @@ import retrofit2.http.Path
 interface StoneApi {
     @GET("stones/today")
     suspend fun getTodayStone(): ResponseGetTodayStoneDto
+
     @PATCH("stones/today")
     suspend fun patchAnswer(
-        @Body requestPatchAnswerDto: RequestPatchAnswerDto
+        @Body requestPatchAnswerDto: RequestPatchAnswerDto,
     )
+
     @GET("stones")
     suspend fun getCollectedStones(
     ): List<ResponseGetCollectedStonesDto>
-    @GET("stones")
+
+    @GET("stones/{stoneId}")
     suspend fun getStoneDetail(
-        @Path("stoneId") stoneId: Int
+        @Path("stoneId") stoneId: Int,
     ): ResponseGetStoneDetailDto
 }

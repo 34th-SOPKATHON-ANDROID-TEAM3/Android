@@ -78,10 +78,10 @@ dependencies {
 
     // coil
     implementation(libs.coil)
-    implementation(libs.androidx.activity)
+    implementation(libs.coil.gif)
 
     // flipview
-    implementation(libs.filp.view)
+    implementation(libs.flip.view)
 
     // test
     testImplementation(libs.junit)

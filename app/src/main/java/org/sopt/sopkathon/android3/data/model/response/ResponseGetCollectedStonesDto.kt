@@ -11,5 +11,5 @@ data class ResponseGetCollectedStonesDto(
     @SerialName("isPretty")
     val isPretty: Boolean,
     @SerialName("stoneImage")
-    val stoneImage: String
+    val stoneImage: String,
 )

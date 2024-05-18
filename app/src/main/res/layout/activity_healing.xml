@@ -1,46 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/neutral98" >
 
-
-    <TextView
-        android:id="@+id/tv_healing_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5월 19일"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toTopOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_healing_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@color/green45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stone"
+            android:layout_marginTop="43dp"
+            android:layout_marginStart="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:flipDuration="400"
         app:flipType="horizontal"
         app:flipOnTouch="true"
-        app:layout_constraintTop_toBottomOf="@id/tv_healing_date"
+        app:layout_constraintTop_toBottomOf="@id/cl_healing_top_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="앞면"
+            android:background="@drawable/shape_white_fill_neutral_line_10_rect"
+            android:layout_marginHorizontal="20dp"
             android:layout_gravity="center"
-            android:gravity="center" />
+            android:gravity="center" >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_healing_card_title_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의 힐링 카드"
+                    android:layout_marginTop="28dp"
+                    android:paddingBottom="28dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/iv_healing_card_front"/>
 
-        <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/iv_healing_card_front"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_healing_card_title_front"
+                    app:layout_constraintBottom_toTopOf="@id/tv_healing_card_flip_front" >
+
+                    <TextView
+                        android:id="@+id/tv_healing_card_word"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="휴식"
+                        android:layout_marginTop="112dp"
+                        android:textColor="@color/neutral80"
+                        android:textAppearance="@style/Typography.Sopkathon.Android3.Display1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_healing_card_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="42dp"
+                        android:textAppearance="@style/Typography.Sopkathon.Android3.Body1"
+                        app:layout_constraintTop_toBottomOf="@id/tv_healing_card_word"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center"
+                        android:text="지금 이 순간만큼은 잠시\n모든 걱정을 내려놓고\n편안하게 쉬었으면 좋겠어요" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_healing_card_flip_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/healing_filp"
+                    android:layout_marginVertical="28dp"
+                    app:layout_constraintTop_toBottomOf="@id/iv_healing_card_front"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="뒷면"
-            android:background="@color/neutral50"
+            android:layout_height="wrap_content"
+            android:text="@string/fl_front_layer"
+            android:background="@drawable/shape_white_fill_neutral_line_10_rect"
+            android:layout_marginHorizontal="20dp"
             android:layout_gravity="center"
-            android:gravity="center" />
+            android:gravity="center" >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_healing_card_back_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_healing_card_back_title"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginBottom="28dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/iv_healing_card_back"/>
+
+                <ImageView
+                    android:id="@+id/iv_healing_card_back"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/img_healing_back"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_healing_card_back_title"
+                    app:layout_constraintBottom_toTopOf="@id/tv_healing_card_back_flip" />
+
+                <TextView
+                    android:id="@+id/tv_healing_card_back_flip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/healing_filp"
+                    android:layout_marginVertical="28dp"
+                    app:layout_constraintTop_toBottomOf="@id/iv_healing_card_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
 
     </com.wajahatkarim3.easyflipview.EasyFlipView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

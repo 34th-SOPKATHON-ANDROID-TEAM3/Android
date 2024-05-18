@@ -4,16 +4,17 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/shape_white_fill_20_rect"
-    android:paddingHorizontal="20dp"
+    android:padding="20dp"
     android:paddingVertical="40dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_calendar_dialog_body"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingHorizontal="14dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:id="@+id/iv_rocks_alert"
@@ -31,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="돌 리포트가 없어요"
+            android:text="@string/tv_calendar_dialog_warning_header"
             android:textColor="@color/neutral10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="이날 도를 깎지 못했어요"
+            android:text="@string/tv_calendar_dialog_comment1"
             android:textColor="@color/neutral20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +55,7 @@
             style="@style/Typography.Sopkathon.Android3.Body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 다음 번에는 꼭 하루 한 번 깎아주세요!"
+            android:text="@string/tv_calendar_dialog_comment2"
             android:textColor="@color/neutral20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="@drawable/shape_green_fill_10_rect"
-        android:text="확인"
+        android:text="@string/btn_calendar_dialog_confirm"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -10,12 +10,8 @@ data class ResponseGetTodayStoneDto(
     val prettyImage: String,
     @SerialName("question")
     val question: String,
-    @SerialName("shakingImage")
-    val shakingImage: String,
-    @SerialName("shavingImage1")
-    val shavingImage1: String,
-    @SerialName("shavingImage2")
-    val shavingImage2: String,
     @SerialName("uglyImage")
     val uglyImage: String,
+    @SerialName("answer")
+    val answer: String?,
 )

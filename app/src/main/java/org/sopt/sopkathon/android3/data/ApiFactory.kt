@@ -6,7 +6,6 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.sopt.sopkathon.android3.BuildConfig
-import org.sopt.sopkathon.android3.data.service.DummyService
 import org.sopt.sopkathon.android3.data.service.StoneApi
 import retrofit2.Retrofit
 
@@ -30,6 +29,5 @@ object ApiFactory {
 }
 
 object ServicePool {
-    val dummyService by lazy { ApiFactory.create<DummyService>() }
     val stoneApi by lazy { ApiFactory.create<StoneApi>() }
 }

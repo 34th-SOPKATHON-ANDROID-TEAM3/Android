@@ -20,6 +20,7 @@ class CalendarViewModel : ViewModel() {
             runCatching {
                 stoneApi.getCollectedStones()
             }.onSuccess {
+                Log.e("리스트", it.toString())
                 _rockList.value = it
             }.onFailure {
                 Log.e("CalendarViewModel", it.message.toString())
