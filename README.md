@@ -24,17 +24,14 @@
 
 **전체 영상**
 
-|<img src="https://s4.ezgif.com/tmp/ezgif-4-0e84ca6114.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-8984c4532f.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-9262cd9e61.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-597d060a81.gif" width=70%>|
+|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/2758a3a8-90c0-4af6-9b66-a45dcdd29ec8" width=70% />|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/9694e24f-6246-490c-ad07-951eb2dec06b" width=70% />|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/05c5b55d-89bf-44c4-9194-ce1cfd7b98c8" width=70% />|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/d2864748-63e3-4e1e-b89f-f47d390800f4" width=70%>|
 |:---------:|:---------:|:---------:|:---------:|
 |Splash 화면|메인 화면|오늘의 질문|돌 깎기|  
 
-|<img src="https://s4.ezgif.com/tmp/ezgif-4-2b581a6bd7.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-a3d2f2b3c5.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-85fe8a30de.gif" width=70% />|<img src="https://s4.ezgif.com/tmp/ezgif-4-708e101327.gif" width=70%>|
+|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/031666ba-6484-41ba-9cb8-80048c9f958d" width=70% />|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/4cad0e49-522c-443c-98d2-978f7e8e1fcd" width=70% />|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/548e1ab5-f2cc-411b-a83b-ec689d5110ba" width=70% />|<img src="https://github.com/34th-SOPKATHON-ANDROID-TEAM3/Android/assets/109855280/5aa04ec1-635e-426d-884d-37fee9da1924" width=70%>|
 |:---------:|:---------:|:---------:|:---------:|
-|행운 카드|돌 깎인 후 메인|캘린더 (돌 모음)|예쁜 돌(기록) 클릭|
+|행운 카드|돌 깎인 후 메인|못생긴 돌(기록x) 클릭|예쁜 돌(기록) 클릭|
 
-|<img src="https://s4.ezgif.com/tmp/ezgif-4-0e1518bfbf.gif" width=70% />|
-|:---------:|
-|못생긴 돌(기록x) 클릭! 
 </br>
 
 ## 👤 팀원별 역할 분담
